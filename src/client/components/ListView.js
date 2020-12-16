@@ -64,14 +64,14 @@ const getRowData = (location: Location): LocationRow => {
       `${location.latitude.toFixed(6)}, ${location.longitude.toFixed(6)}`,
     recorded_at: format(new Date(location.recorded_at), 'MM-dd HH:mm:ss:SSS'),
     created_at: format(new Date(location.created_at), 'MM-dd HH:mm:ss:SSS'),
-    is_moving: location.is_moving ? 'true' : 'false',
-    accuracy: location.accuracy,
-    speed: location.speed,
-    odometer: location.odometer,
+    is_moving: location.data.is_moving ? 'true' : 'false',
+    accuracy: location.data.accuracy,
+    speed: location.data.speed,
+    odometer: location.data.odometer,
     event,
     activity: `${location.activity_type} (${location.activity_confidence}%)`,
-    battery_level: `${(location.battery_level * 100).toFixed(0)}%`,
-    battery_is_charging: location.battery_is_charging,
+    battery_level: `${(location.data.battery.level * 100).toFixed(0)}%`,
+    battery_is_charging: location.data.battery.is_charging,
   };
   console.log(listdata);
   return listdata;
