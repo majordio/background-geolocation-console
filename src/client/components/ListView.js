@@ -56,7 +56,7 @@ const getRowData = (location: Location): LocationRow => {
       break;
     default:
   }
-  return {
+  var listdata = {
     uuid: location.uuid,
     device_id: +location.device_id,
     company_id: location.company_id,
@@ -73,6 +73,8 @@ const getRowData = (location: Location): LocationRow => {
     battery_level: `${(location.battery_level * 100).toFixed(0)}%`,
     battery_is_charging: location.battery_is_charging,
   };
+  console.log(listdata);
+  return listdata;
 };
 
 class ListView extends React.PureComponent<Props> {
