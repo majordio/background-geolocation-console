@@ -107,9 +107,7 @@
     "rsa-key-gen": "^0.6.1",
     "sequelize": "^5.2.7",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8"
-  },
-  "devDependencies": {
+    "webpack-cli": "^3.3.8",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "chai": "^4.2.0",
@@ -155,5 +153,8 @@
     "webpack-dev-middleware": "^3.7.1",
     "webpack-dev-server": "^3.8.0",
     "webpack-hot-middleware": "^2.25.0"
+  },
+  "devDependencies": {
+    
   }
 }
